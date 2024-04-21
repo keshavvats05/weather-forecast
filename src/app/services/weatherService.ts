@@ -18,7 +18,7 @@ ngOnInit(): void {
 
 getWeatherData(cityName:string){
    console.log(cityName)
- return this.httpClient.get<weatherData>(environment.weatherApiBaseUrl+'/'+cityName,{
+ return this.httpClient.get<weatherData>(environment.weatherApiBaseUrl+'/'+cityName + '/EN',{
     headers:new HttpHeaders()
     .set(environment.XRapidAPIHostHeaderName,environment.XRapidAPIHostHeaderValue)
     .set(environment.XRapidAPIKeyHeaderName,environment.XRapidAPIKeyHeaderValue)
